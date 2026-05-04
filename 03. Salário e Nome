@@ -1,0 +1,21 @@
+import locale
+from datetime import datetime
+
+# Define a localização para português para formatar o nome do mês corretamente
+try:
+    locale.setlocale(locale.LC_TIME, "pt_BR.utf8")
+except:
+    # Caso o sistema não tenha o locale instalado, mantém o padrão
+    pass
+
+# Entrada de dados
+nome = input("Nome do Funcionário: ")
+salario = float(input("Salário: "))
+
+# Obtém o mês atual com a primeira letra maiúscula
+mes_atual = datetime.now().strftime('%B').capitalize()
+
+# Exibição do resultado
+print("\n" + "-"*50)
+print(f"O funcionário {nome} tem um salário de R${salario:,.2f} em {mes_atual}.")
+print("-"*50)
