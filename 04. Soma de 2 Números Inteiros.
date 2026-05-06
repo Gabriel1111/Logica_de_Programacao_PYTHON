@@ -1,0 +1,11 @@
+# Solicita o primeiro valor e converte para inteiro
+n1 = int(input("Digite um valor: "))
+
+# Solicita o segundo valor e converte para inteiro
+n2 = int(input("Digite outro valor: "))
+
+# Realiza a soma
+soma = n1 + n2
+
+# Exibe o resultado usando uma f-string para formatação
+print(f"A soma entre {n1} e {n2} é igual a {soma}.")
